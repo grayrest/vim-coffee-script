@@ -75,8 +75,8 @@ syn region  coffeeAryLit        matchgroup=coffeeLiteral start="\i\@<!\[" end="\
 syn match coffeeIdentifier      "@"
 
 syn region  jsInterpolate       start=+`+  skip=+\\n+  end=+`+ keepend
-syn region  coffeeDString        start=+"+  skip=+\\n\|\\"+  end=+"+  contains=jsSpecial,coffeeMaybeInterp,coffeeInterp
-syn region  coffeeString        start=+'+  skip=+\\n\|\\'+  end=+'+  contains=jsSpecial keepend
+syn region  coffeeDString        start=+"+  skip=+\\n\|\\\\\|\\"+  end=+"+  contains=jsSpecial,coffeeMaybeInterp,coffeeInterp
+syn region  coffeeString        start=+'+  skip=+\\n\|\\\\\|\\'+  end=+'+  contains=jsSpecial keepend
 syn region  coffeeString        start=+"""+ end=+"""+ keepend contains=jsSpecial,@Spell
 syn region  coffeeString        start=+'''+ end=+'''+ keepend contains=jsSpecial,@Spell
 
